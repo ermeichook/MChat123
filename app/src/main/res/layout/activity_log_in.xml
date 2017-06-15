@@ -13,8 +13,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="217dp"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/sendchat_logo_gray_1024"
         android:layout_weight="0.18" />
 
