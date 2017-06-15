@@ -1,43 +1,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:background="@color/primary"
-                tools:context="com.marceme.marcefirebasechat.login.LogInActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="com.marceme.marcefirebasechat.login.LogInActivity"
+    android:weightSum="1">
+
 
 
     <!-- For the purpose of the app, many attributes are not refactored-->
 
-    <TextView
-        android:id="@+id/titleChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="M Chat"
-        android:textStyle="bold"
-        android:textColor="@color/text_color"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:layout_marginTop="@dimen/log_in_margin"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="217dp"
+        android:background="@drawable/sendchat_logo_gray_1024"
+        android:layout_weight="0.18" />
 
     <EditText
         android:id="@+id/edit_text_email_login"
-        android:inputType="textEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color"
+        android:layout_height="57dp"
         android:layout_marginLeft="@dimen/log_in_margin"
         android:layout_marginRight="@dimen/log_in_margin"
         android:layout_marginTop="40dp"
-        android:hint="email"/>
+        android:background="@drawable/login"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="70dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color" />
 
     <EditText
         android:id="@+id/edit_text_password_log_in"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="57dp"
         android:inputType="textPassword"
+        android:background="@drawable/email"
         android:ems="10"
+        android:paddingLeft="70dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/text_color"
         android:textColorHint="@color/text_color"
         android:layout_marginLeft="@dimen/log_in_margin"
@@ -49,21 +52,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="LogIn"
-        android:background="@color/text_color"
-        android:textColor="@color/primary"
+        android:background="@drawable/button_background"
+        android:textColor="@color/text_color"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="@dimen/log_in_margin"
-        android:layout_marginRight="@dimen/log_in_margin"/>
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        />
 
     <Button
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:textColor="@color/primary"
-        android:background="@color/text_color"
+        android:textColor="@color/text_color"
+        android:background="@drawable/button_background"
         android:layout_marginTop="8dp"
-        android:layout_marginLeft="@dimen/log_in_margin"
-        android:layout_marginRight="@dimen/log_in_margin"/>
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        />
 
 </LinearLayout>
