@@ -2,11 +2,13 @@
 <resources>
 
     <color name="bg_user_message">#ffffff</color>
+    <color name="shape_colour">#00bee3</color>
 
     <color name="primary_dark">#00b4d7</color>
     <color name="primary">#02ccf4</color>
+    <color name="primary_light">#ffffff</color>
     <color name="accent">#448AFF</color>
-    <color name="divider">#B6B6B6</color>
+    <color name="divider">#dadada</color>
     <color name="text_color">#FFFFFF</color>
     <color name="text_color_icon">#212121</color>
 
