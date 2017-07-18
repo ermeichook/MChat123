@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "486411953533",
+    "firebase_url": "https://fir-3d639.firebaseio.com",
+    "project_id": "fir-3d639",
+    "storage_bucket": "fir-3d639.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486411953533:android:bce33f84b385e35e",
+        "android_client_info": {
+          "package_name": "com.marceme.marcefirebasechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486411953533-k2r2bl9h6a7ojmlti32k2tvq22sahsiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtJ0UVujA8JphSy6eAwfW6FxU7-QE8Yf8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
