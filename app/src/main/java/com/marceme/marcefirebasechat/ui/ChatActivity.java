@@ -133,6 +133,7 @@ public class ChatActivity extends Activity {
         if(!senderMessage.isEmpty()){
 
             ChatMessage newMessage = new ChatMessage(senderMessage,mCurrentUserId,mRecipientId);
+            newMessage.setImageUrl("cvsvds");
             messageChatDatabase.push().setValue(newMessage);
 
             mUserMessageChatText.setText("");

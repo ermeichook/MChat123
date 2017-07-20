@@ -8,6 +8,7 @@ import com.google.firebase.database.Exclude;
 public class ChatMessage {
 
     private String message;
+    private String imageUrl;
     private String sender;
     private String recipient;
 
@@ -38,6 +39,14 @@ public class ChatMessage {
 
     public String getSender(){
         return sender;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     @Exclude
