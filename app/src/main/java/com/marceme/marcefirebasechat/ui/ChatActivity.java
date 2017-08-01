@@ -1,11 +1,17 @@
 package com.marceme.marcefirebasechat.ui;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -36,6 +42,7 @@ public class ChatActivity extends Activity {
     private MessageChatAdapter messageChatAdapter;
     private DatabaseReference messageChatDatabase;
     private ChildEventListener messageChatListener;
+    private static final int RC_TAKE_PICTURE = 101;
 
 
     @Override
@@ -137,6 +144,47 @@ public class ChatActivity extends Activity {
             messageChatDatabase.push().setValue(newMessage);
 
             mUserMessageChatText.setText("");
+        }
+    }
+    private void launchCamera() {
+        Log.d(TAG, "launchCamera");
+
+        // Pick an image from storage
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(intent, RC_TAKE_PICTURE);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_chat, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.action_settings){
+            launchCamera();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d(TAG, "onActivityResult:" + requestCode + ":" + resultCode + ":" + data);
+        if (requestCode == RC_TAKE_PICTURE) {
+            if (resultCode == RESULT_OK) {
+                Uri filreUri = data.getData();
+
+                if (filreUri != null) {
+                    uploadFromUri(filreUri);
+                } else {
+                    Log.w(TAG, "File URI is null");
+                }
+            } else {
+                Toast.makeText(this, "Taking picture failed.", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
